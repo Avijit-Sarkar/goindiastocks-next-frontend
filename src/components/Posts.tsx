@@ -1,15 +1,31 @@
-import { FC } from "react";
+"use client";
+
+import { discussionDatas } from "@/types/discussion";
+import { useEffect, useState } from "react";
 import Post from "./Post";
 
-interface PostsProps {}
+const Posts = () => {
+  const [data, setData] = useState<discussionDatas>([]);
 
-const Posts: FC<PostsProps> = ({}) => {
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    try {
+      const response = await fetch("/api/discussion");
+      const responseData = await response.json();
+      setData(responseData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+
   return (
-    <div className="px-4 mt-24">
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+    <div className="px-4">
+      {data?.map((post, index) => (
+        <Post key={index} post={post} />
+      ))}
     </div>
   );
 };

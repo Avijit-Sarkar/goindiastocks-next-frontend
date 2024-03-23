@@ -1,15 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
+import { discussionData } from "@/types/discussion";
 
-interface PostProps {}
+interface PostProps {
+  post: discussionData;
+}
 
-const Post: FC<PostProps> = ({}) => {
+const Post: FC<PostProps> = ({ post }) => {
   return (
-    <div className="bg-gray my-7 border rounded-sm shadow-sm shadow-black">
+    <div className="bg-gray mb-7 mt-2 border rounded-sm shadow-sm shadow-black">
       <div className="flex justify-center">
         {/* image container */}
         <img
-          src="https://lh3.googleusercontent.com/a/AGNmyxaGAjZCk0rFDw2I-oM0VrBDcCTusSlW0sPVLDWtYg=s96-c"
+          src={post.userImage}
           className="rounded-full h-12 w-12 object-contain border m-4"
           alt=""
         />
@@ -18,9 +21,9 @@ const Post: FC<PostProps> = ({}) => {
           {/* heading */}
           <div className="flex grow justify-between items-center">
             <div className="flex">
-              <p className=" font-bold">Lorem ipsum</p>
+              <p className=" font-bold">{post.userName}</p>
               <button className="bg-blue-800 h-6 mx-4 px-4 text-sm rounded-full text-white">
-                sector 2
+                {post.badge}
               </button>
             </div>
             <span className="text-xs text-blue-500 font-bold">2 min ago</span>
@@ -28,8 +31,7 @@ const Post: FC<PostProps> = ({}) => {
           {/* description */}
           <div className="mr-16 mt-2">
             <div className="text-justify tracking-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate debitis ab repellendus iure adipisci accusantium aut.
+              {post.description}
             </div>
             {/* Buttons */}
             <div className="flex items-center justify-between mt-2 text-sm">
