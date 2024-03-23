@@ -36,7 +36,7 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="mx-auto flex flex-col">
+      <div className="mx-auto flex flex-col md:hidden">
         <div className="flex flex-row px-2 bg-blue-950 mb-8 text-white">
           <button
             onClick={() => setActive("post")}
