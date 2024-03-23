@@ -4,7 +4,7 @@ interface StoryProps {}
 
 const Story: FC<StoryProps> = ({}) => {
   return (
-    <div className="max-w-xs rounded overflow-hidden shadow-lg">
+    <div className="max-w-xs mt-4 rounded overflow-hidden shadow-lg">
       <img className="w-full" src="/story-image.jpg" alt="" />
       <div className="px-6 py-4">
         <div className="font-bold text-md mb-2">The Coldest Sunset</div>
