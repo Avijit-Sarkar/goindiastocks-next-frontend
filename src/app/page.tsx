@@ -1,4 +1,5 @@
 import Posts from "@/components/Posts";
+import Stories from "@/components/Stories";
 import Head from "next/head";
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
           <Posts />
         </section>
 
-        <section className="hidden xl:inline-grid md:col-span-1">
+        <section className="hidden xl:inline-grid md:col-span-2">
           <div className="fixed">
             {/* Market Stories */}
             <div className="flex space-x-2 p-4">
@@ -35,6 +36,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <Stories />
         </section>
       </main>
     </div>
