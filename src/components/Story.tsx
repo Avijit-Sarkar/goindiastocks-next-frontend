@@ -8,7 +8,7 @@ interface StoryProps {
 
 const Story: FC<StoryProps> = ({ story }) => {
   return (
-    <div className="max-w-xs my-4 rounded overflow-hidden shadow-lg">
+    <div className="max-w-xs mt-4 mb-10 rounded-md overflow-hidden shadow-md shadow-black/40">
       <img className="w-full" src={story.image} alt="" />
       <div className="px-6 py-4">
         <div className="font-bold text-md mb-2">{story.title}</div>

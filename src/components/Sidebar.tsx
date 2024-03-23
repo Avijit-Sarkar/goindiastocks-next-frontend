@@ -9,14 +9,14 @@ const Sidebar = () => {
   }
   return (
     <div
-      className={`h-screen flex justify-between bg-gray-100 text-white text-lg ${
+      className={`absolute md:relative max-w-[75vw] z-50 md:z-0 h-screen flex justify-between bg-gray-100 text-white text-lg ${
         !toggleCollaps ? "w-96" : "w-0"
       }`}
     >
       <div
         className={`${
           toggleCollaps ? "hidden" : "flex"
-        } bg-blue-800 w-full flex-col`}
+        } bg-blue-800 text-sm md:text-base w-full flex-col`}
       >
         <div className="flex items-start justify-between py-6 px-8 border-b border-white">
           <div className="flex items-center">

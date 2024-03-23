@@ -8,33 +8,35 @@ interface PostProps {
 
 const Post: FC<PostProps> = ({ post }) => {
   return (
-    <div className="bg-gray mb-7 mt-2 border rounded-sm shadow-sm shadow-black">
+    <div className="mb-7 mt-2 border rounded-md shadow-md shadow-black/40">
       <div className="flex justify-center">
         {/* image container */}
         <img
           src={post.userImage}
-          className="rounded-full h-12 w-12 object-contain border m-4"
+          className="rounded-full h-10 w-10 md:h-12 md:w-12 object-contain border m-1 md:m-4"
           alt=""
         />
         {/* other details container */}
-        <div className="flex m-4 grow flex-col">
+        <div className="flex m-2 md:m-4 grow flex-col text-[10px] md:text-base">
           {/* heading */}
           <div className="flex grow justify-between items-center">
             <div className="flex">
               <p className=" font-bold">{post.userName}</p>
-              <button className="bg-blue-800 h-6 mx-4 px-4 text-sm rounded-full text-white">
+              <button className="bg-blue-800 mx-2 px-2 md:mx-4 md:px-4 text-[10px] md:text-sm rounded-full text-white">
                 {post.badge}
               </button>
             </div>
-            <span className="text-xs text-blue-500 font-bold">2 min ago</span>
+            <span className="text-[10px] text-blue-500 font-bold">
+              2 min ago
+            </span>
           </div>
           {/* description */}
-          <div className="mr-16 mt-2">
-            <div className="text-justify tracking-tight">
+          <div className="mr-6 md:mr-16 mt-2">
+            <div className="text-justify md:tracking-tight">
               {post.description}
             </div>
             {/* Buttons */}
-            <div className="flex items-center justify-between mt-2 text-sm">
+            <div className="flex items-center justify-between mt-2 text-[10px] md:text-sm">
               <button className=" hover:text-gray-400 text-gray-800 font-bold py-2 rounded inline-flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +44,7 @@ const Post: FC<PostProps> = ({ post }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="2"
                   stroke="currentColor"
-                  className="w-6 h-6 mr-2"
+                  className="w-4 md:w-6 h-4 md:h-6 mr-1 md:mr-2"
                 >
                   <path
                     strokeLinecap="round"
@@ -51,7 +53,7 @@ const Post: FC<PostProps> = ({ post }) => {
                   />
                 </svg>
 
-                <span>2k</span>
+                <span className="text-[10px]">2k</span>
               </button>
               <button className=" hover:text-gray-400 text-gray-800 font-bold py-2 rounded inline-flex items-center">
                 <svg
@@ -60,7 +62,7 @@ const Post: FC<PostProps> = ({ post }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="2"
                   stroke="currentColor"
-                  className="w-6 h-6 mr-2"
+                  className="w-4 md:w-6 h-4 md:h-6 mr-1 md:mr-2"
                 >
                   <path
                     strokeLinecap="round"
@@ -74,7 +76,7 @@ const Post: FC<PostProps> = ({ post }) => {
                   />
                 </svg>
 
-                <span>2k</span>
+                <span className="text-[10px]">2k</span>
               </button>
               <button className=" hover:text-gray-400 text-gray-800 font-bold py-2 rounded inline-flex items-center">
                 <svg
@@ -83,7 +85,7 @@ const Post: FC<PostProps> = ({ post }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="2"
                   stroke="currentColor"
-                  className="w-6 h-6 mr-2"
+                  className="w-4 md:w-6 h-4 md:h-6 mr-1 md:mr-2"
                 >
                   <path
                     strokeLinecap="round"
@@ -92,7 +94,7 @@ const Post: FC<PostProps> = ({ post }) => {
                   />
                 </svg>
 
-                <span>2k comments</span>
+                <span className="text-[10px]">2k comments</span>
               </button>
               <button className=" hover:text-gray-400 text-gray-800 font-bold py-2 rounded inline-flex items-center">
                 <svg
@@ -101,7 +103,7 @@ const Post: FC<PostProps> = ({ post }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="2"
                   stroke="currentColor"
-                  className="w-6 h-6 mr-2"
+                  className="w-4 md:w-6 h-4 md:h-6 mr-1 md:mr-2"
                 >
                   <path
                     strokeLinecap="round"
@@ -110,7 +112,7 @@ const Post: FC<PostProps> = ({ post }) => {
                   />
                 </svg>
 
-                <span>share</span>
+                <span className="text-[10px]">share</span>
               </button>
             </div>
           </div>
