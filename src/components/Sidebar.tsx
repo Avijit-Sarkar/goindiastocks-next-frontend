@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Sidebar = () => {
-  const [toggleCollaps, setToggleCollaps] = useState(false);
+  const [toggleCollaps, setToggleCollaps] = useState(true);
   function handletoggleCollaps() {
     setToggleCollaps(!toggleCollaps);
   }
