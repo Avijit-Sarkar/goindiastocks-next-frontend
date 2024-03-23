@@ -1,11 +1,11 @@
 "use client";
 
-import { marketStoriesData } from "@/types/market-stories";
+import { marketStoriesDatas } from "@/types/market-stories";
 import { useEffect, useState } from "react";
 import Story from "./Story";
 
 const Stories = () => {
-  const [data, setData] = useState<marketStoriesData>([]);
+  const [data, setData] = useState<marketStoriesDatas>([]);
 
   useEffect(() => {
     fetchData();

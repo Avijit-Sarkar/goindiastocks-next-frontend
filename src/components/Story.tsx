@@ -1,14 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { marketStoriesData } from "@/types/market-stories";
 import { FC } from "react";
 
-interface MarketStoriesItem {
-  image: string;
-  title: string;
-  description: string;
-}
-
 interface StoryProps {
-  story: MarketStoriesItem;
+  story: marketStoriesData;
 }
 
 const Story: FC<StoryProps> = ({ story }) => {
