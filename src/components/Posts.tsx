@@ -7,6 +7,9 @@ const Posts: FC<PostsProps> = ({}) => {
   return (
     <div className="px-4">
       <Post />
+      <Post />
+      <Post />
+      <Post />
     </div>
   );
 };
