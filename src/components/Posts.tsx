@@ -5,7 +5,7 @@ interface PostsProps {}
 
 const Posts: FC<PostsProps> = ({}) => {
   return (
-    <div className="px-4">
+    <div className="px-4 mt-24">
       <Post />
       <Post />
       <Post />

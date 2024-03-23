@@ -13,9 +13,9 @@ export default function Home() {
       <main className="grid grid-cols-1 md:grid-cols-5 max-w-7xl mx-auto">
         <section className="md:col-span-3">
           {/* Dicussion Forums */}
-          <div className="flex space-x-2 p-4">
+          <div className="flex space-x-2 p-4 fixed">
             <div>
-              <p className="text-center rounded-sm p-2 text-xl bg-gray-100 text-red-500 font-semibold uppercase">
+              <p className="text-center rounded-sm p-2 text-4xl bg-gray-100 text-red-500 font-semibold uppercase">
                 Discussion Forum
               </p>
             </div>
@@ -25,7 +25,16 @@ export default function Home() {
         </section>
 
         <section className="hidden xl:inline-grid md:col-span-1">
-          <div className="fixed top-20">{/* Market Stories */}</div>
+          <div className="fixed">
+            {/* Market Stories */}
+            <div className="flex space-x-2 p-4">
+              <div>
+                <p className="text-center rounded-sm p-2 text-xl bg-gray-100 text-red-500 font-semibold uppercase">
+                  Market Stories
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
