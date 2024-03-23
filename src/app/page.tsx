@@ -25,15 +25,13 @@ export default function Home() {
           <Posts />
         </section>
 
-        <section className="hidden xl:inline-grid md:col-span-2">
-          <div className="fixed">
-            {/* Market Stories */}
-            <div className="flex space-x-2 p-4">
-              <div>
-                <p className="text-center rounded-sm p-2 text-xl bg-gray-100 text-red-500 font-semibold uppercase">
-                  Market Stories
-                </p>
-              </div>
+        <section className="hidden xl:inline-grid md:col-span-2 justify-center">
+          {/* Market Stories */}
+          <div className="flex space-x-2 p-4">
+            <div>
+              <p className="text-center rounded-sm p-2 text-xl bg-gray-100 text-red-500 font-semibold uppercase">
+                Market Stories
+              </p>
             </div>
           </div>
           <Stories />
